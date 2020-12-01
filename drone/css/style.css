@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+}
+.drone-box {
+  position: absolute;
+  max-width: 100px;
+  transition: .4s all ease;
+  animation: fadeDown 3s;
+}
+
+.drone {
+  position: relative;
+  height: 200px;
+  border-left: 50px solid #555555;
+  border-top: 40px solid #555555;
+  border-right: 50px solid #9E9E9E;
+  border-bottom: 40px solid #9E9E9E;
+  border-radius: 10px;
+}
+
+.top-left {
+  position: relative;
+  top: -60px;
+  left: -120px;
+  width: 4px;
+  height: 40px;
+  border-radius: 40%;
+  background: #000;
+  animation: rotation .6s linear infinite;
+}
+.top-left:after {
+  content: "";
+  height: 4px;
+  width: 40px;
+  background: #000;
+  position: absolute;
+  left: -19px;
+  top: 18px;
+  border-radius: 40%;
+}
+
+.top-right {
+  position: relative;
+  top: -100px;
+  left: 120px;
+  width: 4px;
+  height: 40px;
+  border-radius: 40%;
+  background: #000;
+  animation: rotation .6s linear infinite;
+}
+.top-right:after {
+  content: "";
+  height: 4px;
+  width: 40px;
+  background: #000;
+  position: absolute;
+  left: -19px;
+  top: 18px;
+  border-radius: 40%;
+}
+
+.bottom-left {
+  position: relative;
+  bottom: -60px;
+  left: -120px;
+  width: 4px;
+  height: 40px;
+  border-radius: 40%;
+  background: #000;
+  animation: rotation .6s linear infinite;
+}
+.bottom-left:after {
+  content: "";
+  height: 4px;
+  width: 40px;
+  background: #000;
+  position: absolute;
+  left: -19px;
+  top: 18px;
+  border-radius: 40%;
+}
+
+.bottom-right {
+  position: relative;
+  bottom: -20px;
+  left: 120px;
+  width: 4px;
+  height: 40px;
+  border-radius: 40%;
+  background: #000;
+  animation: rotation .6s linear infinite;
+}
+.bottom-right:after {
+  content: "";
+  height: 4px;
+  width: 40px;
+  background: #000;
+  position: absolute;
+  left: -19px;
+  top: 18px;
+  border-radius: 40%;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
